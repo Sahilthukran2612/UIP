@@ -1,0 +1,36 @@
+{
+    "banner": {
+        "title": "OPPENHEIMER",
+        "watchTrailerLink": "Video.html",
+        "languages": ["Hindi", "English", "Tamil", "Bengali"]
+    },
+    "popularMovies": {
+        "title": "Most Popular Documentary Movies",
+        "description": "Radioactive is a 2019 British biographical drama...",
+        "watchLink": "Video.html",
+        "posterImages": [
+            "Oppenheimer-poster-647x1024.webp",
+            "radioactive-british-movie-poster-md.webp",
+            "napoleon.webp"
+        ]
+    },
+    "awardWinningMovies": [
+        {
+            "title": "Bronson",
+            "description": "A young man named Michael Peterson is imprisoned...",
+            "image": "radioactive.webp"
+        },
+        {
+            "title": "Downfall",
+            "description": "A depiction of Hitler's final days...",
+            "image": "down.jpg"
+        }
+ 
+    ],
+    "partnersLogos": [
+        "580b57fcd9996e24bc43c529.png",
+        "5842ab75a6515b1e0ad75b0b.png",
+        "5f4924f968ecc70004ae7066.png"
+     
+    ]
+}

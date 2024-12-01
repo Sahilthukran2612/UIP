@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="sticky">
+    <h2 class="logo">UIP</h2>
+    <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="Video.html">Video</a>
+        <a href="index2.html">Audio</a>
+        <a href="login.html">Log in</a>
+    </nav>
+  </header>
+    <div class="container">
+    
+        <div class="banner">
+            <div class="bg-grp">
+                <div class="bg"></div>
+                <div class="bg">
+                    <h1>OPPENHEIMER</h1>
+                </div>
+                <div class="bg"></div>
+                <div class="bg"></div>
+            </div>
+            <div class="overlay">
+                <button class="watch-trailer-btn" onclick="oppen()">Watch Trailer</button>
+                <div class="languages">
+                    <span>Hindi</span>
+                    <span>English</span>
+                    <span>Tamil</span>
+                    <span>Bengali</span>
+                </div>
+            </div>
+        </div>
+        <div class="tab"></div>
+        <!-- end banner-->
+        <section class="popular-movies-section">
+            <div class="ellipse">
+                <div class="movie-posters">
+
+                    <div class="poster poster1" alt="Movie 1"></div>
+                    <div class="poster poster2" alt="Movie 2"></div>
+                    <div class="poster poster3" alt="Movie 3"></div>
+                </div>
+            </div>
+
+            <div class="movie-info">
+                <h2>Most Popular Documentary Movies</h2>
+                <p>Radioactive is a 2019 British biographical drama film directed by Marjane Satrapi, written by Jack
+                    Thorne, and starring Rosamund Pike as Marie Curie. The film is based on the 2010 graphic novel
+                    Radioactive: Marie & Pierre Curie: A Tale of Love and Fallout by the American artist Lauren
+                    Redniss.<br><br>
+
+                    The film premiered as the Closing Night Gala at the 2019 Toronto International Film Festival. The
+                    film was scheduled to be released in cinemas in 2020, but its opening was cancelled due to the
+                    COVID-19 pandemic. It was released digitally in the United Kingdom on 15 June 2020 by StudioCanal
+                    and began streaming on Amazon Prime Video in the United States on 24 July 2020.</p>
+                <button class="watch-button" onclick="watch()">Watch for free</button>
+            </div>
+        </section>
+
+        <div class="wrapper">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4"></div>
+            <div class="item item5"></div>
+            <div class="item item6"></div>
+            <div class="item item7"></div>
+            <div class="item item8"></div>
+        </div>
+        <div class="tabs">
+            <div class="tabs t1">
+                <div class="content">
+                    <h5>Award Winning Movies</h5>
+                    <!-- cards -->
+                    <div class="card-container">
+                        <button id="prevBtn" class="nav-btn">❮</button>
+                        <div class="card-slider">
+                        <div class="card">
+                            <img src="bronson.jpg" alt="Bronson">
+                            <div class="details">
+                                <h2>Bronson</h2>
+                                <p>A young man named Michael Peterson is imprisoned and transforms into a violent
+                                    persona named Charles Bronson.</p>
+                                    <button class = "trailer" onclick="bronson()">Watch Now</button>
+                                    
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="downfall.jpg" alt="Downfall">
+                            <div class="details">
+                                <h2>Downfall</h2>
+                                <p>A depiction of Hitler's final days in his Berlin bunker at the end of World War II.
+                                </p>
+                                <button class = "trailer" onclick="downfall()">Watch Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="of_gods_and_men.jpg" alt="Of Gods and Men">
+                            <div class="details">
+                                <h2>Of Gods and Men</h2>
+                                <p>The true story of French monks in Algeria who must decide whether to flee or remain
+                                    amidst growing violence.</p>
+                                    <button class = "trailer" onclick="of_gods()">Watch Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="cargo.jpg" alt="Cargo">
+                            <div class="details">
+                                <h2>Cargo</h2>
+                                <p>Stranded in rural Australia in the aftermath of a zombie pandemic, a father must
+                                    protect his infant daughter.</p>
+                                    <button class = "trailer" onclick="cargo()">Watch Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="beasts_of.webp" alt="Beasts of No Nation">
+                            <div class="details">
+                                <h2>Beasts of No Nation</h2>
+                                <p>A young boy becomes a child soldier as his country goes through a brutal civil war.
+                                </p>
+                                <button class = "trailer" onclick="beasts_of()">Watch Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="bronson.jpg" alt="Bronson">
+                            <div class="details">
+                                <h2>Bronson</h2>
+                                <p>A young man named Michael Peterson is imprisoned and transforms into a violent
+                                    persona named Charles Bronson.</p>
+                                    <button class = "trailer" onclick="bronson()">Watch Now</button>
+                                    
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="downfall.jpg" alt="Downfall">
+                            <div class="details">
+                                <h2>Downfall</h2>
+                                <p>A depiction of Hitler's final days in his Berlin bunker at the end of World War II.
+                                </p>
+                                <button class = "trailer" onclick="downfall()">Watch Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="of_gods_and_men.jpg" alt="Of Gods and Men">
+                            <div class="details">
+                                <h2>Of Gods and Men</h2>
+                                <p>The true story of French monks in Algeria who must decide whether to flee or remain
+                                    amidst growing violence.</p>
+                                    <button class = "trailer" onclick="of_gods()">Watch Now</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="cargo.jpg" alt="Cargo">
+                            <div class="details">
+                                <h2>Cargo</h2>
+                                <p>Stranded in rural Australia in the aftermath of a zombie pandemic, a father must
+                                    protect his infant daughter.</p>
+                                    <button class = "trailer" onclick="cargo()">Watch Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="nextBtn" class="nav-btn">❯</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+    <footer>
+        <div class="ell2">
+        <div class="subscribe-section">
+            <h2>SUBSCRIBE TO OUR WEBSITE</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+        </div>
+        <div class="footer-links">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">Customer Billing</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Shipping Policy</a>
+            </div>
+            <div class="copyright">
+                <p>© 2024 UIP. All rights reserved.</p>
+            </div>
+        </div>
+        <div class="social-media">
+           
+        </div>
+    </div>
+    </footer>
+
+
+
+
+    <script>
+
+        function watch(){
+            window.location.href = "Video.html";
+        }
+
+        function bronson(){
+            window.location.href = "bronso_trailer.html"
+        }
+
+        function of_gods(){
+            window.location.href = "of_gods.html"
+        }
+
+        function downfall(){
+            window.location.href = "downfall_trailer.html"
+        }
+
+        function cargo(){
+            window.location.href = "cargo.html"
+        }
+
+        function beasts_of(){
+            window.location.href = "beasts.html"
+        }
+
+        function oppen(){
+            window.location.href = "oppen.html"
+        }
+// 1. Handle Button Redirects
+document.querySelectorAll('.watch-trailer-btn a, .watch-button').forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetPage = button.getAttribute('href');
+        window.location.href = targetPage;  // Redirect to the specified page
+    });
+});
+
+// 2. Subscription Form Validation
+document.querySelector('.subscribe-form').addEventListener('submit', (event) => {
+    const emailInput = document.querySelector('.subscribe-form input[type="email"]');
+    const email = emailInput.value.trim();
+
+    // Simple email validation
+    if (!email || !/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+        event.preventDefault();
+        alert("Please enter a valid email address.");
+    } else {
+        alert("Thank you for subscribing!");
+    }
+});
+
+// 3. Add Hover Effect for Movies
+document.querySelectorAll('.poster').forEach(poster => {
+    poster.addEventListener('mouseover', () => {
+        poster.style.transform = "scale(1.05)";
+        poster.style.transition = "transform 0.3s ease";
+    });
+    poster.addEventListener('mouseout', () => {
+        poster.style.transform = "scale(1)";
+    });
+});
+    </script>
+    <script type = 'text/javascript'>
+        window.addEventListener('scroll',function(){
+        var header = document.querySelector('header');
+        header.classList.toggle('sticky',window.scrollY > 0);
+        });
+        </script>
+    <script src="sliderScript.js"></script>    
+    </body>
+
+</html>

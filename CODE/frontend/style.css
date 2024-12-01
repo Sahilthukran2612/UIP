@@ -1,0 +1,744 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: "Poppins", system-ui;
+    background-color: #010302;
+    color: #eee;
+    margin: 0;
+    overflow-x: hidden;
+   align-items: center;
+}
+
+*::-webkit-scrollbar{
+    width: 0;
+}
+.container{
+
+    height:max-content;
+    overflow: hidden;
+}
+.banner{
+    
+    height: 50vw;
+    position: relative ;
+    overflow: hidden;
+
+}
+.banner .bg{
+   
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    left: 0;
+    bottom: 0;
+    background-position: center bottom;
+    transition: .1s;
+    position: absolute ;
+    
+   
+
+}
+.banner .bg:nth-child(4){
+    background-image: url(./MAN.png);
+    background-size: 65vw;
+    background-repeat: no-repeat;
+    bottom: -1px;
+    align-content: center;
+    animation-name: shrink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes scrollup {
+    from {
+      top: 70%;
+      opacity: 0%;
+      
+    }
+    to {
+        top: 30%;
+        opacity: 100%;
+       
+    }
+  }
+  @keyframes fadein {
+    from {
+      top: 70%;
+      opacity: 0%;
+      
+    }
+    to {
+        top: 30%;
+        opacity: 100%;
+       
+    }
+  }
+  @keyframes shrink {
+    from {
+      background-size: 85vw;
+      
+    }
+    to {
+      background-size: 65vw;
+       
+    }
+  }
+
+.banner .bg:nth-child(3){
+    background-image: url(./NETFLIX.png);
+    display: flex;
+    
+    bottom: 64%;
+    background-repeat: no-repeat;
+    background-size: 20vw;
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+.banner .bg:nth-child(2){
+    top: 30%;
+    text-align: center;
+    animation-name: scrollup;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-iteration-count: 1;
+}
+.banner .bg:nth-child(2) h1{
+   color: #eee;
+   font-size: 8vw;
+   margin: 0;
+   text-shadow: 0 0 20px #010302;
+    
+}
+
+.banner .bg:nth-child(1){
+    background-image: url(./BACK.png);
+}
+
+.tab{
+    max-height: 1vh;
+    background-color: #010302;
+    z-index: 1;
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.tab::before{
+    position: absolute;
+    height: 300px;
+    width: 100vw;
+   background: linear-gradient(
+    to top, #010302 10%,
+    transparent 80%
+   );
+    content: '';
+    bottom: 100%;
+    left: 0;
+
+}
+
+
+
+button a{
+    text-decoration: none;
+    color: #010302;
+}
+
+button a:hover{
+    
+    color: #FFCC00;
+}
+
+
+
+
+
+
+.popular-movies-section {
+    display: flex;
+    margin-top: 3%;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background-color: #010302;
+    z-index: 1;
+    height: 120vh;
+    overflow: hidden;
+}
+
+.movie-posters {
+    display: flex;
+    gap: 10px;
+    background-image: url(./Ellipse\ 1.png);
+ bottom:-10%;
+}
+
+.ellipse{
+    padding-bottom: 60px;
+    background-image: url(./Ellipse\ 1.png);
+    background-repeat: no-repeat;
+    position:relative;
+   top:-40px;
+   right: 110px;
+   width: 800px; /* Increase size of the ellipse */
+   height: 800px;
+   z-index: -1;
+   background-size: 100%;
+}
+.poster {
+    width: 250px;
+    height: 350px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.603);
+    transition: transform 0.3s  ease-in;
+    position:relative;
+}
+
+
+.poster1 {
+    background-image: url(./Oppenheimer-poster-647x1024.webp);
+    border-radius: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-12deg );
+    left: 120px;
+    top: 180px;
+    position:relative;
+   
+}
+
+.poster2 {
+    background-image: url(./radioactive-british-movie-poster-md.webp);
+    border-radius: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-2deg);
+    position: relative;
+    top: 340px;
+    left:30px;
+    z-index: 1;
+}
+
+.poster3 {
+    background-image: url(./napoleon.webp);
+    border-radius: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(10deg);
+    position: relative;
+    top: 160px;
+    left:-100px;
+    z-index:-1;
+
+}
+
+.poster:hover {
+    transform: scale(1.1);
+}
+
+.movie-info {
+    max-width: 400px;
+    margin-right: 200px;
+}
+
+.movie-info h2 {
+    font-family: "Poppins", system-ui;
+    font-weight: 1600;
+    font-size: 34px;
+   
+    margin-bottom: 50px;
+    justify-content: right;
+    width: 200%;
+}
+
+.movie-info p {
+    width:150%;
+    
+    font-size: 16px;
+    font-family: "Poppins", system-ui;
+    font-weight: 200;
+    text-align:justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.watch-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #f39c12;
+    color: #010302;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.watch-button:hover {
+    background-color: #010302;
+    color:#f39c12;
+}
+
+
+
+
+.overlay {
+    position: relative;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.watch-trailer-btn {
+    background-color: #FFCC00;
+    background-size: contain;
+    justify-content: center;
+    border: none;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s, ease;
+}
+.watch-trailer-btn:hover {
+    background-color: transparent;
+   
+    color: #FFCC00;
+   transform: scale(1.1);
+}
+
+.languages {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    z-index: 1;
+    display: space-around;
+   gap: 50px;
+ 
+}
+
+.languages span {
+    color: white;
+
+    margin-left: -10px;
+
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s, ease;
+    
+   
+}
+.languages span:hover {
+    color: rgba(255, 255, 255, 0.556);
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration:underline;
+    transform: scale(1.2);
+}
+
+
+/* last cards */
+
+.tabs{
+    top: -10%;
+    max-height: 100vh;
+    background-color: #010302;
+    z-index: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabs::before{
+    position: absolute;
+    height: 200px;
+    width: 100vw;
+    background: linear-gradient(
+        to top, #010302, transparent
+    );
+    content: '';
+    bottom: 100%;
+    left: 0;
+   
+}
+
+.tabs .t1{
+    background-image:linear-gradient(
+        to top, #010302 0%,
+        transparent 20%,
+        #010302 80%
+    ), url(./OIP.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height:100vh;
+    width: 100%;
+}
+.tabs .t1 .content{
+    margin-right: 650px;
+    margin-top: -100px;
+  text-align: left;
+    width: 700px;
+    max-width: 90%;
+    
+}
+.tabs .t1 .content h5{
+    font-family: "Poppins", system-ui;
+    font-weight: 1600;
+    font-size: 34px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* infinit */
+
+.wrapper {
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+    z-index:2;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  
+  @keyframes scrollLeft {
+    to {
+      left: -200px;
+    }
+  }
+  
+  
+  .item {
+    width: 200px;
+    height: 100px;
+   
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .item1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+    background-image: url(./580b57fcd9996e24bc43c529\ 2.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .item2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+    background-image: url(./5842ab75a6515b1e0ad75b0b\ 1.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+  }
+  
+  .item3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+    background-image: url(./5f4924f968ecc70004ae7066\ 1.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .item4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+    background-image: url(./hd-hbo-white-logo-transparent-background-701751694708059eqwbw0wzhn-removebg-preview\ 1.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+
+  }
+  
+  .item5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+    background-image: url(./disney-plus-hotstar-logo-01.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  
+  .item6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+    background-image: url(./wb_games_outline_verticallogo_ondark_allwhite_rgb-1_1.webp);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .item7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+    background-image: url(./f4cf99bef270e4529c75c24ac331c5bd.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .item8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+    background-image: url(./620135024babde0004ca4189.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+
+
+
+  /* cards */
+  .card-container {
+    display: flex;
+    
+    gap: 20px;
+}
+
+.card {
+    top: 100px;
+    left: 200px;
+    background-position: center;
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.603);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.details {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    opacity: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+    font-size: x-small;
+}
+
+.details h2 {
+    margin: 0;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.details p {
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+
+.card:hover img {
+    opacity: 0.9;
+}
+
+.card:hover .details {
+    opacity: 1;
+}
+
+/* footer */
+
+
+footer {
+    display: flex;
+    background-color: #010302; /* Matches the dark orange/brownish color in the image */
+    padding: 40px;
+    text-align: center;
+    justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  
+   
+  
+}
+footer .ell2{
+    
+    position: relative;
+    background-image: url(./Ellipse\ 2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.subscribe-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+}
+
+.subscribe-section p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    border: solid #e0e0e0 1px;
+    color: white;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    
+   background: transparent;
+    color:white;
+    border: solid #e0e0e0 1px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background-color: #e0e0e0;
+}
+
+.footer-links {
+    margin-top: 30px;
+}
+
+.footer-links .links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links .links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links .links a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #e0e0e0;
+}
+
+
+/* toggle */
+
+header{position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    padding: 10px 50px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100; 
+
+
+}
+.logo{
+    font-size: 2em;
+    color: #eee;
+    pointer-events: none;
+
+}
+
+.navigation{
+    align-items: center;
+    margin-right:100px;
+}
+.navigation a {
+    font-family: "Poppins", system-ui;
+    text-decoration: none;
+    color:#eee;
+    font-weight: 600;
+    margin: 0 10px;
+    padding:6px 15px;
+    margin-right: -10px;
+    
+    
+}
+
+.navigation a:hover {
+    background-color: #FFCC00;
+    border-radius: 20px;
+    
+}

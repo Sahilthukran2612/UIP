@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Music Player</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #121212; /* Deep black background for Spotify style */
+            color: #ffffff;
+        }
+
+        .main-content {
+            display: flex;
+            margin: 30px auto 100px;
+            width: 80%;
+        }
+
+        .player-container {
+            flex: 3;
+            background-color: #181818; /* Dark gray background */
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            min-width: 300px;
+            max-width: 600px;
+            color: #ffffff;
+        }
+
+        .cover-art {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .track-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1DB954; /* Spotify green color */
+            margin: 15px 0 5px;
+        }
+
+        .artist-name {
+            color: #b3b3b3;
+            font-size: 18px;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .control-button {
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 30px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .control-button:hover {
+            color: #1DB954;
+        }
+
+        .progress-bar-container {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 8px;
+            border-radius: 5px;
+            background-color: #404040;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .progress-bar-fill {
+            height: 8px;
+            background-color: #1DB954;
+            border-radius: 5px;
+            width: 0%;
+        }
+
+        .time {
+            font-size: 12px;
+            color: #b3b3b3;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .volume-slider {
+            width: 100%;
+            margin-left: 10px;
+        }
+
+        .suggestions {
+            flex: 1;
+            margin-left: 20px;
+            padding: 20px;
+            background-color: #282828; /* Slightly lighter dark background for contrast */
+            border-radius: 10px;
+            color: #ffffff;
+        }
+
+        .suggestions h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .suggestion-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .suggestion-item:hover {
+            color: #1DB954;
+        }
+
+        .suggestion-cover {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .bottom-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #282828;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #333;
+        }
+
+        .bottom-player .track-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .bottom-player img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .bottom-player .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1DB954;
+        }
+
+        .bottom-player .artist {
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+
+        .bottom-controls {
+            display: flex;
+            align-items: center;
+        }
+        .title {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-content">
+        <!-- Player Section -->
+        <div class="player-container">
+            <audio id="audio-player" src="song.mp3"></audio> <!-- Use the source to add your song -->
+            <img src="https://via.placeholder.com/300" alt="Album Art" class="cover-art">
+            <div class="track-title">Track Title</div>
+            <div class="artist-name">Artist Name</div>
+
+            <div class="controls">
+                <button class="control-button" id="prev-btn">&#9664;&#9664;</button>
+                <button class="control-button" id="play-btn">&#9654;</button>
+                <button class="control-button" id="next-btn">&#9654;&#9664;</button>
+            </div>
+
+            <div class="progress-bar-container">
+                <span class="time" id="current-time">0:00</span>
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                </div>
+                <span class="time" id="duration">0:00</span>
+            </div>
+
+            <div class="volume-control">
+                <label for="volume">🔊</label>
+                <input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01">
+            </div>
+        </div>
+
+        <!-- Suggestions Section -->
+        <div class="suggestions">
+            <h3>Suggestions</h3>
+            <div class="suggestion-item">
+                <img src="https://via.placeholder.com/50" class="suggestion-cover">
+                <div>
+                    <div>Song Title 1</div>
+                    <div class="artist">Artist 1</div>
+                </div>
+            </div>
+            <div class="suggestion-item">
+                <img src="https://via.placeholder.com/50" class="suggestion-cover">
+                <div>
+                    <div>Song Title 2</div>
+                    <div class="artist">Artist 2</div>
+                </div>
+            </div>
+            <div class="suggestion-item">
+                <img src="https://via.placeholder.com/50" class="suggestion-cover">
+                <div>
+                    <div>Song Title 3</div>
+                    <div class="artist">Artist 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Player -->
+    <div class="bottom-player">
+        <div class="track-info">
+            <img src="https://via.placeholder.com/50" alt="Cover">
+            <div>
+                <div class="title">Playing Song</div>
+                <div class="artist">Artist</div>
+            </div>
+        </div>
+        <div class="bottom-controls">
+            <button class="control-button">&#9664;&#9664;</button>
+            <button class="control-button">&#9654;</button>
+            <button class="control-button">&#9654;&#9664;</button>
+        </div>
+    </div>
+<script>
+    const audio = document.getElementById('audio-player');
+    const playBtn = document.getElementById('play-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const volumeSlider = document.getElementById('volume');
+    const progressBar = document.getElementById('progress-bar');
+    const progressBarFill = document.getElementById('progress-bar-fill');
+    const currentTimeDisplay = document.getElementById('current-time');
+    const durationDisplay = document.getElementById('duration');
+
+    let isPlaying = false;
+
+    playBtn.addEventListener('click', () => {
+        if (isPlaying) {
+            audio.pause();
+            playBtn.innerHTML = '&#9654;';
+        } else {
+            audio.play();
+            playBtn.innerHTML = '&#10074;&#10074;';
+        }
+        isPlaying = !isPlaying;
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        const progressPercent = (audio.currentTime / audio.duration) * 100;
+        progressBarFill.style.width = `${progressPercent}%`;
+        currentTimeDisplay.textContent = formatTime(audio.currentTime);
+        durationDisplay.textContent = formatTime(audio.duration);
+    });
+
+    progressBar.addEventListener('click', (e) => {
+        const clickPosition = (e.offsetX / progressBar.offsetWidth) * audio.duration;
+        audio.currentTime = clickPosition;
+    });
+
+    prevBtn.addEventListener('click', () => {
+        audio.currentTime = Math.max(audio.currentTime - 5, 0);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        audio.currentTime = Math.min(audio.currentTime + 5, audio.duration);
+    });
+
+    volumeSlider.addEventListener('input', (e) => {
+        audio.volume = e.target.value;
+    });
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
+        return `${minutes}:${secs}`;
+    }
+</script>
+</body>
+</html>

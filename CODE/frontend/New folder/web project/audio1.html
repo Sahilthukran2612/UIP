@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Like Music Player</title>
+    <style>
+        /* Reset and basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        /* Main content area */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .header h2 {
+            font-size: 40px;
+            
+        }
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 100px;
+            margin-top: 60px;
+        }
+        .album {
+            background-color: #282828;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+            width: 200px;
+        }
+        .album img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .album:hover {
+            transform: scale(1.05);
+        }
+        .album h3 {
+            font-size: 16px;
+            margin: 10px 0 5px;
+        }
+        .album p {
+            color: #b3b3b3;
+            font-size: 14px;
+        }
+
+        .color{
+            color : white;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h2>RECOMMENDED FOR YOU</h2>
+        </div>
+        <div class="album-grid">
+            <!-- Example Album -->
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 1</h3>
+            </a>
+                <p>Artist Name</p>
+            
+            </div>
+            <!-- Repeat for more albums -->
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 2</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 3</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 4</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 5</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 6</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 7</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 8</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 9</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 10</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+          
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 11</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 12</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 13</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 14</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 15</h3>
+                </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 16</h3>
+                </a>
+                <p>Artist Name</p>
+            </div>
+            <div class="album"><a class = "color" href="audio2.html">
+                <img src="https://via.placeholder.com/150" alt="Album Art">
+                <h3>Album Title 17</h3>
+            </a>
+                <p>Artist Name</p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
